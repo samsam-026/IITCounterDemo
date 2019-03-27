@@ -30,6 +30,11 @@ export default class App extends Component<Props> {
     this.setState({ counter: counter + 1 });
   }
 
+  decreaseCounter = () => {
+    const { counter } = this.state;
+    this.setState({ counter: counter -1 });
+  }
+
   render() {
     const { counter } = this.state;
     return (
@@ -38,6 +43,7 @@ export default class App extends Component<Props> {
         <View style={styles.row}>
           <Text style={styles.instructions}>{counter}</Text>
           <Button onPress={this.increaseCounter} title="Increase counter" />
+          <Button onPress={this.decreaseCounter} title="Decrease counter" />
         </View>
       </View>
     );
