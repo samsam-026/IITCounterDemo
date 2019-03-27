@@ -6,18 +6,11 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button
-} from 'react-native';
-
+import React, { Component } from "react";
+import { StyleSheet, Text, View, Button } from "react-native";
 
 type Props = {};
 export default class App extends Component<Props> {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +21,12 @@ export default class App extends Component<Props> {
   increaseCounter = () => {
     const { counter } = this.state;
     this.setState({ counter: counter + 1 });
-  }
+  };
+
+  decreaseCounter = () => {
+    const { counter } = this.state;
+    this.setState({ counter: counter - 1 });
+  };
 
   render() {
     const { counter } = this.state;
@@ -38,33 +36,33 @@ export default class App extends Component<Props> {
         <View style={styles.row}>
           <Text style={styles.instructions}>{counter}</Text>
           <Button onPress={this.increaseCounter} title="Increase counter" />
+          <Button onPress={this.increaseCounter} title="Increase counter" />
         </View>
       </View>
     );
   }
-
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   },
   row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center'
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center"
   },
   welcome: {
     fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    textAlign: "center",
+    margin: 10
   },
   instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    margin: 10,
-  },
+    textAlign: "center",
+    color: "#333333",
+    margin: 10
+  }
 });
