@@ -14,9 +14,7 @@ import {
   Button
 } from 'react-native';
 
-
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
 
   constructor(props) {
     super(props);
