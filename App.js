@@ -38,6 +38,7 @@ export default class App extends Component<Props> {
         <View style={styles.row}>
           <Text style={styles.instructions}>{counter}</Text>
           <Button onPress={this.increaseCounter} title="Increase counter" />
+           <Button onPress={this.increaseCounter} title="Increase counter Button 2" />
         </View>
       </View>
     );
